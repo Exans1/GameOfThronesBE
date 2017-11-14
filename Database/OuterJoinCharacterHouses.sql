@@ -1,5 +1,5 @@
 Select FirstName, Characters_Houses.HouseId, LastName, CharacterId, Characters.HouseId
-FROM [Characters]
+FROM Characters
 LEFT OUTER JOIN Characters_Houses 
-ON [Characters].HouseId = [Characters_Houses].HouseId
-WHERE Characters_Houses.HouseId is NULL
+ON [Characters].Id = Characters_Houses.CharacterId
+WHERE Characters_Houses.CharacterId is NULL
